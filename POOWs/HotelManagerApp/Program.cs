@@ -8,9 +8,7 @@ namespace HotelManagerApp
     {
         static void Main()
         {
-            Rate r = new Rate(500, "Ron");
 
-            r.Print();
         }
     }
 }

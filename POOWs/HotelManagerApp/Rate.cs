@@ -3,20 +3,22 @@ using System.Collections.Generic;
 
 namespace HotelManagerApp
 {
-    public class Rate
+    class Rate
     {
-        readonly List<string> currency = new List<string>() { "RON", "EURO", "DOLLAR" };
-        internal double Amount
+        private double amount;
+        private string currency;
+        internal enum Currencies { RON, EURO, DOLLAR };
+        internal double Amount 
         {
             get
             {
-                return Amount;
+                return amount;
             }
             set
             {
                 if (value > 0)
                 {
-                    this.Amount = value;
+                    amount = value;
                 }
                 else
                 {
@@ -24,18 +26,21 @@ namespace HotelManagerApp
                 }
             }
         }
-
         internal string Currency
         {
             get
             {
-                return Currency;
+                return currency;
             }
             set
             {
-                if(currency.Contains(value.ToUpper()))
+                if(Enum.IsDefined(typeof(Currencies), value.ToUpper()))
                 {
-                    Currency = value.ToUpper();
+                    currency = value.ToUpper();
+                }
+                else
+                {
+                    Console.WriteLine("These currency is not implemented");
                 }
             }
         }
@@ -47,7 +52,7 @@ namespace HotelManagerApp
         }
         internal void Print()
         {
-            Console.WriteLine($"Amount: {Amount}{Currency}");
+            Console.WriteLine($"Amount: {Amount} {Currency}");
         }
     }
 }
