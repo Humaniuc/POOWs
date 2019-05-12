@@ -15,7 +15,7 @@ namespace PizzaApp
             {
                 if(Enum.IsDefined(typeof(PizzaBaseName), value.ToLower()))
                 {
-                    name = value.ToLower();
+                    name = value;
                 }
                 else
                 {
@@ -31,7 +31,7 @@ namespace PizzaApp
             {
                 if(value > 0)
                 {
-                    if (PizzaBaseName.italian == (PizzaBaseName)Enum.Parse(typeof(PizzaBaseName), this.name))
+                    if (PizzaBaseName.italian == (PizzaBaseName)Enum.Parse(typeof(PizzaBaseName), this.name.ToLower()))
                     {
                         cost = value * 1.5;
                     }
@@ -56,7 +56,7 @@ namespace PizzaApp
 
         internal void Print()
         {
-            Console.WriteLine($"Base: {name} (${cost})");
+            Console.WriteLine($"Base: {Name} (${Cost})");
         }
     }
 }
