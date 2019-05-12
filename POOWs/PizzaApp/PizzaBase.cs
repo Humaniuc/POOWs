@@ -29,14 +29,22 @@ namespace PizzaApp
             get { return cost; }
             set
             {
-                if(PizzaBaseName.italian == (PizzaBaseName)Enum.Parse(typeof(PizzaBaseName), this.name))
+                if(value > 0)
                 {
-                    cost = value * 1.5;
+                    if (PizzaBaseName.italian == (PizzaBaseName)Enum.Parse(typeof(PizzaBaseName), this.name))
+                    {
+                        cost = value * 1.5;
+                    }
+                    else
+                    {
+                        cost = value;
+                    }
                 }
                 else
                 {
-                    cost = value;
+                    Console.WriteLine("Cost cannot be negative");
                 }
+                
             }
         }
 

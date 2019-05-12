@@ -9,7 +9,7 @@ namespace PizzaApp
     {
         static void Main(string[] args)
         {
-            
+
         }
     }
 }
