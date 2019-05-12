@@ -47,8 +47,8 @@ namespace HotelManagerApp
 
         internal Rate(double amount, string currency)
         {
-            Amount = amount;
-            Currency = currency;
+            this.amount = amount;
+            this.currency = currency;
         }
         internal void Print()
         {
