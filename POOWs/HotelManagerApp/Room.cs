@@ -12,6 +12,14 @@
             roomNumber = roomNum;
             this.rate = rate;
         }
+
+        internal Room(uint roomNum, uint adultsNum, uint childrenNum, Rate rate) : this(roomNum, rate)
+        {
+            roomNumber = roomNum;
+            adultsNumber = adultsNum;
+            childrenNumber = childrenNum;
+            this.Rate = rate;
+        }
         internal uint RoomNumber
         {
             get { return roomNumber; }

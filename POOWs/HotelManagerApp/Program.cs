@@ -8,19 +8,26 @@ namespace HotelManagerApp
     {
         static void Main()
         {
-            Hotel h1 = new Hotel("Hotel 1", "Iasi");
-            Rate rate = new Rate(15.6, "Euro");
-            Room r1 = new Room(1, rate);
-            r1.AdultsNumber = 2;
-            r1.ChildrenNumber = 1;
-            h1.Rooms.Add(r1);
-            rate.Amount = 18;
-            Room r2 = new Room(2, rate);
-            r2.AdultsNumber = 2;
-            r2.ChildrenNumber = 2;
-            h1.Rooms.Add(r2);
+            HotelManager hm = new HotelManager();
+
+            Room r1 = new Room(1, 2, 1, new Rate(50.9, "Euro"));
+            Room r2 = new Room(2, 2, 2, new Rate(68, "Ron"));
+            Room r3 = new Room(3, 1, 3, new Rate(40, "Dollar"));
+            Hotel h1 = new Hotel("Hotel 1", "Iasi", new System.Collections.Generic.List<Room>() { r1, r2, r3});
+            hm.AddHotel(h1);
+            r1 = new Room(1, 2, 1, new Rate(51.9, "Euro"));
+            r2 = new Room(2, 2, 2, new Rate(70, "Ron"));
+            r3 = new Room(3, 2, 1, new Rate(80, "Dollar"));
+            Hotel h2 = new Hotel("Hotel 1", "Iasi", new System.Collections.Generic.List<Room>() { r1, r2, r3 });
+            hm.AddHotel(h2);
 
             h1.Print();
+            h2.Print();
+
+            System.Console.WriteLine("Rooms lower than price:");
+            hm.FindRoomsLowerThanPrice(60);
+
+            System.Console.ReadLine();
         }
     }
 }

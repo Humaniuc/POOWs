@@ -6,11 +6,15 @@ namespace HotelManagerApp
     {
         private string name;
         private string city;
-        private List<Room> rooms = new List<Room>();
+        private List<Room> rooms;
         internal Hotel(string name, string city)
         {
             this.name = name;
             this.city = city;
+        }
+        internal Hotel(string name, string city, List<Room> rooms) : this(name, city)
+        {
+            this.rooms = rooms;
         }
         internal string Name
         {
