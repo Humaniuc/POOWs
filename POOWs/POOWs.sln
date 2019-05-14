@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueueApp", "QueueApp\QueueA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentsAndWorkersApp", "StudentsAndWorkersApp\StudentsAndWorkersApp.csproj", "{26C6E76B-6053-4AFD-8F96-2DCF09B2F1D5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackApp", "StackApp\StackApp.csproj", "{23018531-DC39-45BD-A666-6E0732F2CC09}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{26C6E76B-6053-4AFD-8F96-2DCF09B2F1D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{26C6E76B-6053-4AFD-8F96-2DCF09B2F1D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{26C6E76B-6053-4AFD-8F96-2DCF09B2F1D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23018531-DC39-45BD-A666-6E0732F2CC09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23018531-DC39-45BD-A666-6E0732F2CC09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23018531-DC39-45BD-A666-6E0732F2CC09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23018531-DC39-45BD-A666-6E0732F2CC09}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
