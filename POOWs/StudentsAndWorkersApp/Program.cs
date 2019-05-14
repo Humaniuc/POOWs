@@ -47,7 +47,15 @@ namespace StudentsAndWorkersApp
             }
             System.Console.WriteLine();
 
-            
+
+            IEnumerable<Human> humans = students;
+            humans = humans.Concat(workers);
+            humans = humans.OrderByDescending(Human => Human.FirstName);
+
+            foreach(Human h in humans)
+            {
+                h.Print();
+            }
             
         }      
     }
