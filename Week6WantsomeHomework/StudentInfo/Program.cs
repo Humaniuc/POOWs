@@ -18,11 +18,11 @@ namespace StudentInfo
             human.Specialty = Specialties.CTI.ToString();
             System.Console.WriteLine(human.ToString());
 
-            Student humaniuc = new Student("Humaniuc", "Juravle", "Petru", 1890223);
+            Student humaniuc = new Student("Humeniuc", "Juravle", "Petru", 1890223);
             System.Console.WriteLine(human.Equals(humaniuc)? "Equal objects" : "Unequal objects");
             System.Console.WriteLine($"{human.FirstName} has {human.GetHashCode()} hashcode");
 
-            Student juravle = new Student("Humaniuc", "Juravle", "Petru", 888777);
+            Student juravle = new Student("Huma", "Juravle", "Petru", 8887777);
 
             if(human == humaniuc)
             {
@@ -32,6 +32,13 @@ namespace StudentInfo
             if(human != juravle)
             {
                 System.Console.WriteLine($"{human.FirstName} is different with {juravle.FirstName}");
+            }
+
+            List<Student> students = new List<Student> { human, humaniuc, juravle };
+            students.Sort();
+            foreach(Student s in students)
+            {
+                System.Console.WriteLine($"{s.FirstName} ");
             }
 
             System.Console.ReadLine();

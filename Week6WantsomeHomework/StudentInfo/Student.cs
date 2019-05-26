@@ -2,7 +2,7 @@
 
 namespace StudentInfo
 {
-    class Student
+    class Student : IComparable
     {
         private readonly string firstName;
         private readonly string middleName;
@@ -64,7 +64,6 @@ namespace StudentInfo
             Faculty: {Faculty}
             Course: {Course}" + "\n";
         }
-
         public override int GetHashCode()
         {
             return this.SSN;
@@ -77,6 +76,55 @@ namespace StudentInfo
         public static bool operator !=(Student s1, Student s2)
         {
             return !s1.Equals(s2);
+        }
+        public int CompareTo(object obj)
+        {
+            int retur = 0;
+            if(obj is Student)
+            {
+                Student student = obj as Student;
+                int count;
+                if(student.FirstName.Length > this.FirstName.Length)
+                {
+                    count = this.FirstName.Length;
+                }
+                else
+                {
+                    count = student.FirstName.Length;
+                }
+
+                for(int i = 0; i < count; i++)
+                {
+                    if(this.FirstName[i] < student.FirstName[i] )
+                    {
+                        retur = -1;
+                        break;
+                    }
+                    else if(this.FirstName[i] > student.FirstName[i])
+                    {
+                        retur = 1;
+                        break;
+                    }
+                    else
+                    {
+                        continue;
+                    }
+                }
+                retur = 0;
+
+                if(retur == 0)
+                {
+                    if(this.SSN < student.SSN)
+                    {
+                        retur = -2;
+                    }
+                    else if (this.SSN > student.SSN)
+                    {
+                        retur = 2;
+                    }
+                }
+            }
+            return retur;
         }
     }
 }
