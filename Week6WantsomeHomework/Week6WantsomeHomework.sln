@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentInfo", "StudentInfo\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICloneableApp", "ICloneableApp\ICloneableApp.csproj", "{1B3D5AAD-7E0D-4B83-996F-93F94983B0F5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonApp", "PersonApp\PersonApp.csproj", "{477ADFF5-9751-4F36-BD99-025A43D2A7BA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{1B3D5AAD-7E0D-4B83-996F-93F94983B0F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B3D5AAD-7E0D-4B83-996F-93F94983B0F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1B3D5AAD-7E0D-4B83-996F-93F94983B0F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{477ADFF5-9751-4F36-BD99-025A43D2A7BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{477ADFF5-9751-4F36-BD99-025A43D2A7BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{477ADFF5-9751-4F36-BD99-025A43D2A7BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{477ADFF5-9751-4F36-BD99-025A43D2A7BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
