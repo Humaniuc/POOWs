@@ -2,7 +2,7 @@
 
 namespace StudentInfo
 {
-    class Student : IComparable
+    class Student : IComparable, ICloneable
     {
         private readonly string firstName;
         private readonly string middleName;
@@ -21,7 +21,7 @@ namespace StudentInfo
         internal string MiddleName { get; private set; }
         internal string LastName { get; private set; }
         internal int SSN { get; private set; }
-        internal string address { get; set; }
+        internal string Address { get; set; }
         internal string MobilePhone
         {
             get { return mobilePhone; }
@@ -58,7 +58,7 @@ namespace StudentInfo
             return $@"
             Name: {FirstName} + {MiddleName} + {LastName}
             SSN: {SSN}
-            address: {address}
+            address: {Address}
             contact: tel. {MobilePhone} email {Email}
             University: {University}
             Faculty: {Faculty}
@@ -125,6 +125,21 @@ namespace StudentInfo
                 }
             }
             return retur;
+        }
+
+        public object Clone()
+        {
+            Student stud = this.MemberwiseClone() as Student;
+            stud.FirstName = String.Copy(this.FirstName);
+            stud.MiddleName = String.Copy(this.MiddleName);
+            stud.LastName = String.Copy(this.LastName);
+            stud.Address = String.Copy(this.Address);
+            stud.MobilePhone = String.Copy(this.MobilePhone);
+            stud.Email = String.Copy(this.Email);
+            stud.Course = String.Copy(this.Course);
+            stud.Faculty = String.Copy(this.Faculty);
+            stud.University = String.Copy(this.University);
+            return stud;
         }
     }
 }

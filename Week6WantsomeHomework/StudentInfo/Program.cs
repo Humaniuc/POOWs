@@ -10,8 +10,9 @@ namespace StudentInfo
         static void Main(string[] args)
         {
             Student human = new Student("Juravle", "Humaniuc", "Petru", 1890223);
-            human.address = "Straja, Suceava";
+            human.Address = "Straja, Suceava";
             human.Email = "human";
+            human.MobilePhone = "0749666666";
             human.Course = ".Net";
             human.University = Universities.Asachi.ToString();
             human.Faculty = Faculties.AutomaticaSiCalculatoare.ToString();
@@ -40,6 +41,9 @@ namespace StudentInfo
             {
                 System.Console.WriteLine($"{s.FirstName} ");
             }
+
+            var stud = human.Clone();
+            System.Console.WriteLine((stud as Student).ToString()); 
 
             System.Console.ReadLine();
         }
