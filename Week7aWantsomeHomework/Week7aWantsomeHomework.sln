@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week7aWantsomeHomework", "W
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DownloadAFileFromNet", "DownloadAFileFromNet\DownloadAFileFromNet.csproj", "{203D5DB9-F1BE-47E1-B04C-7BE1056D1DF0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadNumbersAscending", "ReadNumbersAscending\ReadNumbersAscending.csproj", "{F729E1ED-C7C4-471E-BEB6-EF95B0AE771D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{203D5DB9-F1BE-47E1-B04C-7BE1056D1DF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{203D5DB9-F1BE-47E1-B04C-7BE1056D1DF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{203D5DB9-F1BE-47E1-B04C-7BE1056D1DF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F729E1ED-C7C4-471E-BEB6-EF95B0AE771D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F729E1ED-C7C4-471E-BEB6-EF95B0AE771D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F729E1ED-C7C4-471E-BEB6-EF95B0AE771D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F729E1ED-C7C4-471E-BEB6-EF95B0AE771D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
