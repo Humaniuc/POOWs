@@ -11,9 +11,9 @@ namespace DownloadAFileFromNet
     {
         static void Main(string[] args)
         {
+            WebClient webClient = new WebClient();
             try
             {
-                WebClient webClient = new WebClient();
                 webClient.DownloadFile("https://www.desicomments.com/wp-content/uploads/Samurai-Jack-Doing-Practise-Dc36.gif", "SamuraiJack.gif");
             }
             catch(ArgumentNullException e)
@@ -28,7 +28,10 @@ namespace DownloadAFileFromNet
             {
                 Console.WriteLine(e.Message);
             }
-            
+            finally
+            {
+                webClient.Dispose();
+            }
         }
     }
 }
