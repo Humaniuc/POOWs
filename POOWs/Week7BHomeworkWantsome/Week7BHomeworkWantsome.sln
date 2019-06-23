@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28803.352
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week7BHomeworkWantsome", "Week7BHomeworkWantsome\Week7BHomeworkWantsome.csproj", "{C09A3CBF-EB65-490D-8366-36C33721747D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomDelegates", "Week7BHomeworkWantsome\CustomDelegates.csproj", "{C09A3CBF-EB65-490D-8366-36C33721747D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FuncDelegates", "FuncDelegates\FuncDelegates.csproj", "{2C796409-4E5E-4EB9-A773-E1F415970DB6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{C09A3CBF-EB65-490D-8366-36C33721747D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C09A3CBF-EB65-490D-8366-36C33721747D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C09A3CBF-EB65-490D-8366-36C33721747D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C796409-4E5E-4EB9-A773-E1F415970DB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C796409-4E5E-4EB9-A773-E1F415970DB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C796409-4E5E-4EB9-A773-E1F415970DB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C796409-4E5E-4EB9-A773-E1F415970DB6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
