@@ -21,6 +21,14 @@ namespace Week7BHomeworkWantsome
 
             PrintHelper(PrintNumber, 10000);
             PrintHelper(PrintMoney, 10000);
+
+            printDel = PrintNumber;
+            printDel += PrintMoney;
+            printDel += PrintHexazecimal;
+            printDel(1000);
+
+            printDel -= PrintHexazecimal;
+            printDel(2000);
         }
 
         public static void PrintNumber(int num)
@@ -32,6 +40,10 @@ namespace Week7BHomeworkWantsome
             Console.WriteLine("Money: {0:C}", money);
         }
 
+        public static void PrintHexazecimal(int dec)
+        {
+            Console.WriteLine("Hexazecimal: {0:X}", dec);
+        }
         public static void PrintHelper(Print delegateFunc, int numToPrint)
         {
             delegateFunc(numToPrint);
