@@ -2,8 +2,8 @@
 
 namespace GenericsHomeworkA
 {
-    public class GenericList<T>
-    { 
+    public class GenericList<T> where T : struct, IComparable<T>
+    {
         private T[] arr;
         private uint idx;
 
@@ -15,7 +15,7 @@ namespace GenericsHomeworkA
         {
             get
             {
-                if(index >= idx)
+                if (index >= idx)
                 {
                     throw new IndexOutOfRangeException();
                 }
@@ -23,7 +23,7 @@ namespace GenericsHomeworkA
             }
             set
             {
-                if(index >= idx)
+                if (index >= idx)
                 {
                     throw new IndexOutOfRangeException();
                 }
@@ -38,9 +38,9 @@ namespace GenericsHomeworkA
             }
             set
             {
-                if(value is uint)
+                if (value is uint)
                 {
-                    if(value > arr.Length)
+                    if (value > arr.Length)
                     {
                         throw new IndexOutOfRangeException(message: "Index out of range (bigger than array size);");
                     }
@@ -70,11 +70,11 @@ namespace GenericsHomeworkA
                     Array.Copy(arr, index + 1, arr, index, Count - index);
                 }
             }
-            catch(ArgumentOutOfRangeException e)
+            catch (ArgumentOutOfRangeException e)
             {
                 Console.WriteLine(e.Message);
             }
-            catch(ArgumentNullException e)
+            catch (ArgumentNullException e)
             {
                 Console.WriteLine(e.Message);
             }
@@ -105,13 +105,13 @@ namespace GenericsHomeworkA
         }
         public void InsertAt(uint index, T node)
         {
-            if(index < --Count)
+            if (index < --Count)
             {
                 Array.Copy(arr, index, arr, index + 1, ++Count - index);
                 Count++;
                 arr[index] = node;
             }
-            else if(index == arr.Length)
+            else if (index == arr.Length)
             {
                 arr = DoubleSize();
             }
@@ -144,6 +144,32 @@ namespace GenericsHomeworkA
             }
             Array.Copy(arr, newArr, arr.Length);
             return newArr;
+        }
+
+        public T Min() 
+        {
+            T min = arr[0];
+            for(int i = 1; i < Count; i++)
+            {
+                if(min.CompareTo(arr[i]) > 0)
+                {
+                    min = arr[i];
+                }
+            }
+            return min;
+        }
+
+        public T Max()
+        {
+            T max = arr[0];
+            for (int i = 1; i < Count; i++)
+            {
+                if (max.CompareTo(arr[i]) < 0)
+                {
+                    max = arr[i];
+                }
+            }
+            return max;
         }
     }
 }

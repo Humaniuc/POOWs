@@ -28,6 +28,10 @@ namespace GenericsHomeworkA
             ls.Add(8);
             Console.WriteLine(ls.ToString());
 
+            Console.WriteLine($"Min: {ls.Min()}");
+            Console.WriteLine($"Max: {ls.Max()}");
+
+
             Console.WriteLine("After removing nodes");
             ls.RemoveByValue(3);
             ls.RemoveByValue(18);
