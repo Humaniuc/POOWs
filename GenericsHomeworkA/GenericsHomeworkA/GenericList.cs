@@ -55,6 +55,10 @@ namespace GenericsHomeworkA
         public void Add(T node)
         {
             arr[Count++] = node;
+            if (Count == arr.Length)
+            {
+                arr = DoubleSize();
+            }
         }
         public void RemoveByValue(T node)
         {
@@ -107,6 +111,10 @@ namespace GenericsHomeworkA
                 Count++;
                 arr[index] = node;
             }
+            else if(index == arr.Length)
+            {
+                arr = DoubleSize();
+            }
             else
             {
                 throw new IndexOutOfRangeException("Index to insert out of range of list");
@@ -125,6 +133,17 @@ namespace GenericsHomeworkA
                 str += $"{this.arr[i]} ";
             }
             return str;
+        }
+
+        public T[] DoubleSize()
+        {
+            T[] newArr = null;
+            if (Count >= arr.Length)
+            {
+                newArr = new T[arr.Length * 2];
+            }
+            Array.Copy(arr, newArr, arr.Length);
+            return newArr;
         }
     }
 }

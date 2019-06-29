@@ -26,7 +26,7 @@ namespace GenericsHomeworkA
             ls.Add(3);
             ls.Add(12);
             ls.Add(8);
-            Console.WriteLine(ls.ToString());        
+            Console.WriteLine(ls.ToString());
 
             Console.WriteLine("After removing nodes");
             ls.RemoveByValue(3);
@@ -67,8 +67,8 @@ namespace GenericsHomeworkA
                 Console.WriteLine(e.Message);
             }
 
-            Console.WriteLine("Search by value 3: ");
-            Console.WriteLine(ls.ElementAtByValue(3) > 0? $"Searched value is at {ls.ElementAtByValue(3)}" : "There is no such value");
+            Console.WriteLine("Search by value 19: ");
+            Console.WriteLine(ls.ElementAtByValue(19) > 0? $"Searched value is at {ls.ElementAtByValue(19)}" : "There is no such value");
 
             Console.WriteLine("After clear list:");
             ls.ClearList();
