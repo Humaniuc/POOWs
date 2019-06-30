@@ -38,18 +38,11 @@ namespace GenericsHomeworkA
             }
             set
             {
-                if (value is uint)
+                if (value > arr.Length)
                 {
-                    if (value > arr.Length)
-                    {
-                        throw new IndexOutOfRangeException(message: "Index out of range (bigger than array size);");
-                    }
-                    idx = value;
+                    throw new IndexOutOfRangeException(message: "Index out of range (bigger than array size);");
                 }
-                else
-                {
-                    throw new NotFiniteNumberException(message: "Not a positive number");
-                }
+                idx = value;
             }
         }
         public void Add(T node)
