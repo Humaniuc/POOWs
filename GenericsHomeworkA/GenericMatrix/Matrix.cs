@@ -56,11 +56,11 @@ namespace GenericMatrix
         {
             get
             {
-                return this[row, col];
+                return Matrixx[row, col];
             }
             set
             {
-                this[row, col] = value;
+                Matrixx[row, col] = value;
             }
         }
 
