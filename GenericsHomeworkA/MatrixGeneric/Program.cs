@@ -25,18 +25,39 @@ namespace MatrixGeneric
             matr2.Print();
 
             System.Console.WriteLine("Add Matrix: ");
-            Matrix<int> addMatr = matr1 + matr2;
-            addMatr.Print();
+            try
+            {
+                Matrix<int> addMatr = matr1 + matr2;
+                addMatr.Print();
+            }
+            catch (NotPossibleOperationException e)
+            {
+                System.Console.WriteLine(e.Message);
+            }
 
             System.Console.WriteLine("Diff Matrix: ");
-            Matrix<int> diffMatr = matr1 - matr2;
-            diffMatr.Print();
+            try
+            {
+                Matrix<int> diffMatr = matr1 - matr2;
+                diffMatr.Print();
+            }
+            catch (NotPossibleOperationException e)
+            {
+                System.Console.WriteLine(e.Message);
+            }
 
             System.Console.WriteLine("Product Matrix: ");
-            Matrix<int> prodMatrix = matr1 * matr2;
-            prodMatrix.Print();
+            try
+            {
+                Matrix<int> prodMatrix = matr1 * matr2;
+                prodMatrix.Print();
+            }
+            catch (NotPossibleOperationException e)
+            {
+                System.Console.WriteLine(e.Message);
+            }
 
-            if(diffMatr)
+            if(matr1)
             {
                 System.Console.WriteLine("Matrix with non zero elements");
             }
